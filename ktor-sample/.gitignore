@@ -1,36 +1,35 @@
+build
 .gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### IntelliJ IDEA ###
+.gradletasknamecache
 .idea
-*.iws
+out
 *.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+.vscode
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+*.versionsBackup
+*.releaseBackup
+release.properties
+local.properties
+*.swp
 
-### VS Code ###
-.vscode/
+.video
+.attach_pid*
+apidoc
+
+
+bin/
+.settings
+.project
+.classpath
+.konan
+
+.DS_Store
+
+hs_err_pid*.log
+
+gradle-user-home
+
+.fleet
+.kotlin
+
+scan-journal.log
