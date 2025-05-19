@@ -1,5 +1,11 @@
 package com.example
 
+import com.example.config.configureContentNegotiation
+import com.example.config.configureDI
+import com.example.config.configureJWTSecurity
+import com.example.config.configureMonitoring
+import com.example.config.configureRouting
+import com.example.config.configureStatusPages
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {
@@ -7,8 +13,10 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
-    configureFrameworks()
-    configureSecurity()
-    configureSerialization()
+    configureDI()
+    configureMonitoring()
+    configureContentNegotiation()
+    configureJWTSecurity()
+    configureStatusPages()
     configureRouting()
 }
