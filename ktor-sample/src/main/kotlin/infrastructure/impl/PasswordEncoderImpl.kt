@@ -7,7 +7,9 @@ import com.example.model.User
 class PasswordEncoderImpl: PasswordEncoder {
     override fun encode(password: String): String {
         //this handles adding salt and hashing password
-        return BCrypt.withDefaults().hashToString(10, password.toCharArray())
+        return BCrypt.withDefaults().hashToString(10, password.toCharArray()).also {
+            println("Hashed: $it")
+        }
     }
 
     override fun isPasswordValid(user: User, password: String): Boolean {

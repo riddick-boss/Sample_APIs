@@ -1,1 +1,1 @@
-rootProject.name = "jwt-sample"
+rootProject.name = "ktor-sample"
