@@ -19,7 +19,7 @@ fun Application.bookRoutes() {
             post {
                 val requestBody = call.receive<CreateBookRequest>()
                 bookService.create(requestBody)
-                call.respond(HttpStatusCode.OK, "Book created!")
+                call.respond(HttpStatusCode.Created, "Book created!")
             }
 
             get("/{id}") {
